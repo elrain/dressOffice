@@ -54,7 +54,6 @@ public class ChangeDressServlet extends HttpServlet {
             try{
                 Accessor acc = Accessor.getInstance("localhost", "Diplom");
                 acc.changeDress(idDress);
-                
             }
             catch(Exception ex){
                 ex.printStackTrace();
@@ -64,9 +63,7 @@ public class ChangeDressServlet extends HttpServlet {
             JOptionPane.showMessageDialog(null, "Incorrect id for Dress");
             response.sendRedirect(request.getContextPath()+"/ChangeDress.jsp");
         }
-        request.setAttribute("id_dress", idDress);
         response.sendRedirect(request.getContextPath()+"/ChangeDressSub.jsp");
-        Cookie c = new Cookie("id_dress", param);
     }
 
     @Override

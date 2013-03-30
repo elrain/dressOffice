@@ -190,4 +190,24 @@ public class Accessor {
             }
             return 0;
         }
+        
+        public void addDress(List newDress){
+            int id = -1;
+            List<Integer> refs = new ArrayList<Integer>();
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT max(id_dress) FROM `diplom`.`dress`;");
+                if(rs.next())   id = rs.getInt(1);
+                ++id;
+                
+                if(newDress.get(2).equals("Ì")) refs.add(1);
+                else if(newDress.get(2).equals("Ä")) refs.add(2);
+                
+                
+//                int n = st.executeUpdate("INSERT INTO `diplom`.`dress` (id_dress,name_dress,price_dress,ref_type,ref_subgenre,ref_size,ref_color,ref_place,free,wath) VALUES("+id+", '"+newDress.get(0)+"','"+newDress.get(1)+"','"+newDress.get(2)+"','"+newDress.get(4)+"','"+newDress.get(5)+"','"+newDress.get(6)+"','"+newDress.get(7)+"', 0, 0);");
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+        }
 }

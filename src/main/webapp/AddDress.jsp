@@ -34,7 +34,7 @@
                         </menu>
                     </td>
                     <td>
-                        <form>
+                        <form method="POST">
                             <table>
                                     <tbody>
                                         <tr>
@@ -47,7 +47,12 @@
                                         </tr>
                                         <tr>
                                             <td>Тип </td>
-                                            <td><input type="text" id="add_type_dress" name="add_type_dress"></td>
+                                            <td>
+                                                <select id="add_type_dress" name="add_type_dress">
+                                                    <option value="М">Мальчик</option>
+                                                    <option value="Д">Девочка</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Жанр </td>
@@ -63,7 +68,13 @@
                                         </tr>
                                         <tr>
                                             <td>Размер </td>
-                                            <td><input type="text" id="add_size_dress" name="add_size_dress"></td>
+                                            <td>
+                                                <select id="add_size_dress" name="add_size_dress">
+                                                    <option value="42">42</option>
+                                                    <option value="46">46</option>
+                                                    <option value="50">50</option>
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Место расположение </td>
@@ -72,7 +83,7 @@
                                     </tbody>
                                 </table>
                             <div align="right">
-                                <input type="button" id="add_dress" name="add_dress" value="Добавить"><br>
+                                <input type="submit" id="add_dress" name="add_dress" value="Добавить"><br>
                             </div>
                         </form>
                     </td>
