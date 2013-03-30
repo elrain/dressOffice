@@ -4,6 +4,7 @@
  */
 package com.servlets;
 
+import com.accessor.Accessor;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,6 +23,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = {"/ChangeDress.jsp"})
 public class ChangeDressServlet extends HttpServlet {
 
+    private String param;
+    private int idDress;
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -90,6 +94,21 @@ public class ChangeDressServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //        processRequest(request, response);
+        param = request.getParameter("id_dress");
+        idDress = Integer.parseInt(param);
+        if(idDress > 0){
+            try{
+                Accessor acc = Accessor.getInstance("localhost", "Diplom");
+                acc.changeDress(idDress);
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Incorrect id for Dress");
+            response.sendRedirect(request.getContextPath()+"/ChangeDress.jsp");
+        }
     }
 
     /**

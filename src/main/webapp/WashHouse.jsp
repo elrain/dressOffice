@@ -41,8 +41,8 @@
                                 <input type="text" id="washHouse" name="washHouse">
                             </div>
                             <div align="right">
-                                <input type="button" id="goToWashHouse" name="goToWashHouse" value="Отправить в прачечную"><br>
-                                <input type="button" id="fromWashHouse" name="fromWashHouse" value="Принять с прачечной">
+                                <input type="button" id="goToWashHouse" name="commandWashHouse" value="Отправить в прачечную"><br>
+                                <input type="button" id="fromWashHouse" name="commandWashHouse" value="Принять с прачечной">
                             </div>
                         </frame>
                     </td>

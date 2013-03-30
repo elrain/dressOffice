@@ -35,12 +35,12 @@
                         </menu>
                     </td>
                     <td>
-                        <form>
+                        <form method="POST">
                             <div align="center">Номер костюма
                                 <input type="text" id="id_dress" name="id_dress">
                             </div>
                             <div align="right">
-                                <input type="button" id="searchById_dress" name="searchById_dress" value="Редактировать">
+                                <input type="submit" id="searchById_dress" name="searchById_dress" value="Редактировать">
                             </div>
                         </form>
                     </td>

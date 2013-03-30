@@ -152,4 +152,32 @@ public class Accessor {
             }
             id = -1;
         }
+        
+        public void changePlace(int oldPlace, int newPlace){
+            int id = -1;
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT id_place FROM place WHERE adress_place = "+oldPlace+";");
+                if(rs.next())   id = rs.getInt(1);
+                int n = st.executeUpdate("UPDATE `diplom`.`place` SET `adress_place`='"+newPlace+"' WHERE `id_place`='"+id+"';");
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+            id = -1;
+        }
+        
+        public void changeDress(int id_dress){
+            List dressList = new ArrayList();
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`dress` WHERE `id_dress` = '"+id_dress+"';");
+                if(rs.next()){
+                    dressList.add(rs.getArray(10));
+                }
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+        }
 }
