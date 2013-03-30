@@ -39,6 +39,16 @@ public class AddDressServlet extends HttpServlet {
 	BufferedReader fin=new BufferedReader(new FileReader(getServletContext().getRealPath("AddDress.jsp")));
 	String buf;
 	while((buf=fin.readLine()) != null) {
+            if(buf.equals("<!--here-->")){
+                writer.println("<td>");
+                writer.println("<select>");
+                for(int i=0; i<5; ++i){
+                    writer.println("<option value='"+i+"'>"+i+"</option>");
+                }
+                writer.println("<option value='new'>new</option>");
+                writer.println("</select>");
+                writer.println("</td>");
+            }
 		writer.println(buf);
 	}
 	fin.close();

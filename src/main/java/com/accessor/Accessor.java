@@ -122,7 +122,8 @@ public class Accessor {
                     ++id;
                     int n = 0;
                     if(id != 0)   
-                        n = st.executeUpdate("INSERT INTO `diplom`.`place` (id_place, adress_place) VALUES("+id+", "+newPlace+");");
+                        n = st.executeUpdate("INSERT INTO `diplom`.`place` (id_place, adress_place) VALUES("+id+", "
+                                +newPlace+");");
                     else {
                         JOptionPane.showMessageDialog(null, "Incorrect number of place");
                     }
@@ -159,7 +160,8 @@ public class Accessor {
                 Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery("SELECT id_place FROM place WHERE adress_place = "+oldPlace+";");
                 if(rs.next())   id = rs.getInt(1);
-                int n = st.executeUpdate("UPDATE `diplom`.`place` SET `adress_place`='"+newPlace+"' WHERE `id_place`='"+id+"';");
+                int n = st.executeUpdate("UPDATE `diplom`.`place` SET `adress_place`='"+newPlace+"' WHERE `id_place`="
+                        + "'"+id+"';");
             }
             catch(Exception ex){
                 ex.printStackTrace();

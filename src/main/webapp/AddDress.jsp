@@ -64,15 +64,16 @@
                                         </tr>
                                         <tr>
                                             <td>Цвет </td>
+<!--here-->
                                             <td><input type="text" id="add_color_dress" name="add_color_dress"></td>
                                         </tr>
                                         <tr>
                                             <td>Размер </td>
                                             <td>
                                                 <select id="add_size_dress" name="add_size_dress">
-                                                    <option value="42">42</option>
-                                                    <option value="46">46</option>
-                                                    <option value="50">50</option>
+                                                    <option value='42'>42</option>
+                                                    <option value='46'>46</option>
+                                                    <option value='50'>50</option>
                                                 </select>
                                             </td>
                                         </tr>
