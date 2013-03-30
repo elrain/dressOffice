@@ -5,7 +5,6 @@
 <%@page contentType="text/html" pageEncoding="windows-1251"%>
 -->
 
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,7 +39,7 @@
                                 <input type="text" id="id_dress" name="id_dress">
                             </div>
                             <div align="right">
-                                <input type="submit" id="searchById_dress" name="searchById_dress" value="Редактировать">
+                                <input type="submit" id="searchById_dress" name="searchById_dress" value="Редактировать" >
                             </div>
                         </form>
                     </td>

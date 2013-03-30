@@ -27,11 +27,10 @@
                     <td bgcolor="#AFC5ED">
                         <menu>
                             <form method="POST">
-                                <li name="sv" value="1"><a href="Svodnaya.jsp">Сводная ведомость</a></li>
-                            </form>
+                                <li><a href="Svodnaya.jsp">Сводная ведомость</a></li>
                                 <li><a href="NewDelPage.jsp">Добавление/Удаление места расположения</a></li>
                                 <li><a href="ChangePlace.jsp">Изменение места расположения</a></li>
-                            
+                            </form>                            
                         </menu>
                     </td>
                     <td>

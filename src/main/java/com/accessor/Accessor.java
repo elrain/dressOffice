@@ -167,17 +167,27 @@ public class Accessor {
             id = -1;
         }
         
-        public void changeDress(int id_dress){
+        public int changeDress(int id_dress){
             List dressList = new ArrayList();
             try{
                 Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`dress` WHERE `id_dress` = '"+id_dress+"';");
                 if(rs.next()){
-                    dressList.add(rs.getArray(10));
+                    dressList.add(rs.getInt("id_dress"));
+                    dressList.add(rs.getString("name_dress"));
+                    dressList.add(rs.getInt("price_dress"));
+                    dressList.add(rs.getInt("ref_type"));
+                    dressList.add(rs.getInt("ref_subgenre"));
+                    dressList.add(rs.getInt("ref_size"));
+                    dressList.add(rs.getInt("ref_color"));
+                    dressList.add(rs.getInt("ref_place"));
+                    dressList.add(rs.getInt("free"));
+                    dressList.add(rs.getInt("wath"));
                 }
             }
             catch(Exception ex){
                 ex.printStackTrace();
             }
+            return 0;
         }
 }
