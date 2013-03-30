@@ -93,15 +93,15 @@ public class NewDelServlet extends HttpServlet {
             throws ServletException, IOException {
 //        processRequest(request, response);
         request.setCharacterEncoding("cp1251");
-        String but1 = request.getParameter("add");
-        String but2 = request.getParameter("delete");
+        String but1 = request.getParameter("command");
+//        String but2 = request.getParameter("delete");
 //        JOptionPane.showMessageDialog(null, but1);
 //        JOptionPane.showMessageDialog(null, but2);
         String strPlace = request.getParameter("place");
         int place = Integer.parseInt(strPlace);
         
         if(place > 0){
-            if(but1 != null) {
+            if(but1.equals("Добавить")) {
                 try{
                     Accessor acc = Accessor.getInstance("localhost", "Diplom");
                     acc.addNewPlace(place);
@@ -111,7 +111,7 @@ public class NewDelServlet extends HttpServlet {
                 }
                 response.sendRedirect(request.getContextPath()+"/NewDelPage.jsp");
             }
-            else if(but2 != null){
+            else if(but1.equals("Удалить")){
                 try{
                     Accessor acc = Accessor.getInstance("localhost", "Diplom");
                     acc.delOldPlace(place);
@@ -119,6 +119,7 @@ public class NewDelServlet extends HttpServlet {
                 catch(Exception ex){
                     ex.printStackTrace();
                 }
+                response.sendRedirect(request.getContextPath()+"/NewDelPage.jsp");
             }
         }
         else{

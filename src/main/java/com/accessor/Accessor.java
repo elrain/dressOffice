@@ -138,7 +138,6 @@ public class Accessor {
         
         public void delOldPlace(int oldPlace){
             int id = -1;
-            int nid = 0;
             try{
                 Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery("SELECT id_place FROM place WHERE adress_place = "+oldPlace+";");
@@ -151,5 +150,6 @@ public class Accessor {
             catch(Exception ex){
                 ex.printStackTrace();
             }
+            id = -1;
         }
 }
