@@ -65,7 +65,7 @@
                                         <tr>
                                             <td>Цвет </td>
 <!--here-->
-                                            <td><input type="text" id="add_color_dress" name="add_color_dress"></td>
+                                           <!-- <td><input type="text" id="add_color_dress" name="add_color_dress"></td>-->
                                         </tr>
                                         <tr>
                                             <td>Размер </td>

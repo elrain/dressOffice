@@ -169,23 +169,99 @@ public class Accessor {
             id = -1;
         }
         
-        public int changeDress(int id_dress){
+        public List getDress(int idDress){
             List dressList = new ArrayList();
             try{
                 Statement st = con.createStatement();
-                ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`dress` WHERE `id_dress` = '"+id_dress+"';");
+                ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`dress` WHERE `id_dress` = '"+idDress+"';");
                 if(rs.next()){
                     dressList.add(rs.getInt("id_dress"));
                     dressList.add(rs.getString("name_dress"));
-                    dressList.add(rs.getInt("price_dress"));
-                    dressList.add(rs.getInt("ref_type"));
-                    dressList.add(rs.getInt("ref_subgenre"));
-                    dressList.add(rs.getInt("ref_size"));
-                    dressList.add(rs.getInt("ref_color"));
-                    dressList.add(rs.getInt("ref_place"));
-                    dressList.add(rs.getInt("free"));
-                    dressList.add(rs.getInt("wath"));
+                    dressList.add(rs.getString("price_dress"));
+                    dressList.add(rs.getString("ref_type"));
+                    dressList.add(rs.getString("ref_subgenre"));
+                    dressList.add(rs.getString("ref_size"));
+                    dressList.add(rs.getString("ref_color"));
+                    dressList.add(rs.getString("ref_place"));
+                    dressList.add(rs.getString("free"));
+                    dressList.add(rs.getString("wath"));
                 }
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+
+            return dressList;
+        }
+        
+        public int changeDress(List dressList, List dressChangeList){
+            String script = "UPDATE `diplom`.`dress` SET ";
+
+            int n=0;
+            if(Integer.parseInt((String) dressChangeList.get(0)) == 1){
+                ++n;
+                if(n>1){
+                    script += ", ";
+                    --n;
+                }
+                script += "`name_dress`='"+dressList.get(1)+"'";
+            }
+                
+            if(Integer.parseInt((String) dressChangeList.get(1)) == 1){
+                ++n;
+                if(n>1){
+                    script += ", ";
+                    --n;
+                }
+                script += "`price_dress`='"+dressList.get(2)+"'";
+            }
+            if(Integer.parseInt((String) dressChangeList.get(2)) == 1){
+                ++n;
+                if(n>1){
+                    script += ", ";
+                    --n;
+                }
+                script += "`ref_type`='"+dressList.get(3)+"'";
+            }
+            if(Integer.parseInt((String) dressChangeList.get(3)) == 1){
+                ++n;
+                if(n>1){
+                    script += ", ";
+                    --n;
+                }
+                script += "`ref_subgenre`='"+dressList.get(4)+"'";
+            }
+            if(Integer.parseInt((String) dressChangeList.get(4)) == 1){
+                ++n;
+                if(n>1){
+                    script += ", ";
+                    --n;
+                }
+                script += "`ref_size`='"+dressList.get(5)+"'";
+            }
+            if(Integer.parseInt((String) dressChangeList.get(5)) == 1){
+                ++n;
+                if(n>1){
+                    script += ", ";
+                    --n;
+                }
+                script += "`ref_color`='"+dressList.get(6)+"'";
+            }
+            if(Integer.parseInt((String) dressChangeList.get(6)) == 1){
+                ++n;
+                if(n>1){
+                    script += ", ";
+                    --n;
+                }
+                script += "`ref_place`='"+dressList.get(7)+"'";
+            }
+            
+            script += " WHERE `id_dress`='"+dressList.get(0)+"';";
+            
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = null;
+                int stN = st.executeUpdate(script);
             }
             catch(Exception ex){
                 ex.printStackTrace();
@@ -211,5 +287,22 @@ public class Accessor {
             catch(Exception ex){
                 ex.printStackTrace();
             }
+        }
+        
+        public List getColor(){
+            List colorList = new ArrayList();
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`color`;");
+                while(rs.next()){
+                    colorList.add(rs.getInt(1));
+                    colorList.add(rs.getString(2));
+                }
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+            
+            return colorList;
         }
 }

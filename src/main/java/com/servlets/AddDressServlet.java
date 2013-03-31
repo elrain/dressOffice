@@ -25,9 +25,10 @@ import javax.swing.JOptionPane;
 @WebServlet(urlPatterns = {"/AddDress.jsp"})
 public class AddDressServlet extends HttpServlet {
     
-    private List addDrtessList = new ArrayList();
+    private List addDressList = new ArrayList();
     private String param;
     private int n = 0;
+    private List colorList = new ArrayList();
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,10 +41,17 @@ public class AddDressServlet extends HttpServlet {
 	String buf;
 	while((buf=fin.readLine()) != null) {
             if(buf.equals("<!--here-->")){
+                try{
+                    Accessor acc = Accessor.getInstance("localhost", "Diplom");
+                    colorList = acc.getColor();
+                }
+                catch(Exception ex){
+                    ex.printStackTrace();
+                }
                 writer.println("<td>");
-                writer.println("<select>");
-                for(int i=0; i<5; ++i){
-                    writer.println("<option value='"+i+"'>"+i+"</option>");
+                writer.println("<select id='add_color_dress' name='add_color_dress'>");
+                for(int i=0; i<colorList.size(); i+=2){
+                    writer.println("<option value='"+colorList.get(i)+"'>"+colorList.get(i+1)+"</option>");
                 }
                 writer.println("<option value='new'>new</option>");
                 writer.println("</select>");
@@ -61,17 +69,17 @@ public class AddDressServlet extends HttpServlet {
         
         response.setCharacterEncoding("cp1251");
         
-        param = request.getParameter("add_name_dress");     addDrtessList.add(param);
-        param = request.getParameter("add_price_dress");    addDrtessList.add(param);
-        param = request.getParameter("add_type_dress");     addDrtessList.add(param);
-        param = request.getParameter("add_genre_dress");    addDrtessList.add(param);
-        param = request.getParameter("add_subGenre_dress"); addDrtessList.add(param);
-        param = request.getParameter("add_color_dress");    addDrtessList.add(param);
-        param = request.getParameter("add_size_dress");     addDrtessList.add(param);
-        param = request.getParameter("add_place_dress");    addDrtessList.add(param);
+        param = request.getParameter("add_name_dress");     addDressList.add(param);
+        param = request.getParameter("add_price_dress");    addDressList.add(param);
+        param = request.getParameter("add_type_dress");     addDressList.add(param);
+        param = request.getParameter("add_genre_dress");    addDressList.add(param);
+        param = request.getParameter("add_subGenre_dress"); addDressList.add(param);
+        param = request.getParameter("add_color_dress");    addDressList.add(param);
+        param = request.getParameter("add_size_dress");     addDressList.add(param);
+        param = request.getParameter("add_place_dress");    addDressList.add(param);
         
         for(int i=0; i<8; ++i){
-            if(addDrtessList.get(i) == null) ++n;
+            if(addDressList.get(i) == null) ++n;
         }
         if (n > 0) JOptionPane.showMessageDialog(null, "Incorrect data for dress");
         else{

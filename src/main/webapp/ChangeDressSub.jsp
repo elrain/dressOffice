@@ -2,14 +2,14 @@
     Document   : ChangeDressSub
     Created on : 26.03.2013, 15:01:36
     Author     : Tanya
-<%@page contentType="text/html" pageEncoding="windows-1251"%>
+<%@page contentType="text/html" pageEncoding="cp1251"%>
 -->
 
 
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+        <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
         <title>JSP Page</title>
     </head>
     <body>
@@ -35,45 +35,47 @@
                         </menu>
                     </td>
                     <td>
-                        <form>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>Название </td>
-                                            <td><input type="text" id="name_dress" name="name_dress"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Цена </td>
-                                            <td><input type="text" id="price_dress" name="price_dress"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Тип </td>
-                                            <td><input type="text" id="type_dress" name="type_dress"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Жанр </td>
-                                            <td><input type="text" id="genre_dress" name="genre_dress"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Поджанр </td>
-                                            <td><input type="text" id="subGenre_dress" name="subGenre_dress"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Цвет </td>
-                                            <td><input type="text" id="color_dress" name="color_dress"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Размер </td>
-                                            <td><input type="text" id="size_dress" name="size_dress"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Место расположение </td>
-                                            <td><input type="text" id="place_dress" name="place_dress"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <form method="POST">
+<!--here-->
+<!--                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Название </td>
+                                        <td><input type="text" id="name_dress" name="name_dress"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Цена </td>
+                                        <td><input type="text" id="price_dress" name="price_dress"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Тип </td>
+                                        <td><input type="text" id="type_dress" name="type_dress"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Жанр </td>
+                                        <td><input type="text" id="genre_dress" name="genre_dress"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Поджанр </td>
+                                        <td><input type="text" id="subGenre_dress" name="subGenre_dress"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Цвет </td>
+                                        <td><input type="text" id="color_dress" name="color_dress"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Размер </td>
+                                        <td><input type="text" id="size_dress" name="size_dress"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Место расположение </td>
+                                        <td><input type="text" id="place_dress" name="place_dress"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+-->
                             <div align="right">
-                                <input type="button" id="change_dress" name="change_dress" value="Редактировать"><br>
+                                <input type="submit" id="change_dress" name="change_dress" value="Редактировать"><br>
                             </div>
                         </form>
                     </td>

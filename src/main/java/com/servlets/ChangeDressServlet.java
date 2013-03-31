@@ -15,6 +15,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
 /**
@@ -50,19 +51,9 @@ public class ChangeDressServlet extends HttpServlet {
 
         param = request.getParameter("id_dress");
         idDress = Integer.parseInt(param);
-        if(idDress > 0){
-            try{
-                Accessor acc = Accessor.getInstance("localhost", "Diplom");
-                acc.changeDress(idDress);
-            }
-            catch(Exception ex){
-                ex.printStackTrace();
-            }
-        }
-        else {
-            JOptionPane.showMessageDialog(null, "Incorrect id for Dress");
-            response.sendRedirect(request.getContextPath()+"/ChangeDress.jsp");
-        }
+        
+        HttpSession session = request.getSession();
+        session.setAttribute("idDress", idDress);
         response.sendRedirect(request.getContextPath()+"/ChangeDressSub.jsp");
     }
 
