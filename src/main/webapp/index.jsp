@@ -21,14 +21,13 @@
                 </div>
                 <div id="right">
                     <div class="content">
-<form method="POST">
+                        <form method="POST">
                             <table>
                                 <tbody>
                                     <tr>
                                         <td>Login:</td>
                                         <td><input type="text" id="login" name="login" size="15"></td>
                                     </tr>
-<tr><td>&nbsp;</td></tr>
                                     <tr>
                                         <td>Password:</td>
                                         <td><input type="password" id="password" name="password" size="15"></td>

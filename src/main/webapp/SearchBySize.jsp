@@ -35,7 +35,7 @@
                                 <div align="center"> Размер
                                     <input type="text" id="size" name="size">
                                 </div>
-                                <div align="right">
+                                <div align="right"> 
                                     <input type="submit" id="searchBySize" name="searchBySize" value="Искать">
                                 </div>
                             </form>

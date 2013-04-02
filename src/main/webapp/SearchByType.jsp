@@ -35,7 +35,7 @@
                                 <div align="center"> Тип
                                     <input type="text" id="type" name="type">
                                 </div>
-                                <div align="right">
+                                <div align="right"> 
                                     <input type="submit" id="searchByType" name="searchByType" value="Искать">
                                 </div>
                             </form>

@@ -32,7 +32,7 @@
                     <div id="right">
                         <div class="content">
                             <form method="POST">
-                            <table>
+                                <table>
                                     <tbody>
                                         <tr>
                                             <td>Название </td>
@@ -56,7 +56,7 @@
 <!--here1-->
                                             <!--<td><input type="text" id="add_genre_dress" name="add_genre_dress"></td>-->
                                         </tr>
-                                        <tr>
+                                        <tr> 
                                             <td>Поджанр </td>
 <!--here2-->
                                             <!--<td><input type="text" id="add_subGenre_dress" name="add_subGenre_dress"></td>-->
@@ -69,13 +69,6 @@
                                         <tr>
                                             <td>Размер </td>
 <!--here4-->
-<!--                                            <td>
-                                                <select id="add_size_dress" name="add_size_dress">
-                                                    <option value='42'>42</option>
-                                                    <option value='46'>46</option>
-                                                    <option value='50'>50</option>
-                                                </select>
-                                            </td>-->
                                         </tr>
                                         <tr>
                                             <td>Место расположение </td>
@@ -83,9 +76,10 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            <div align="right">
-                                <input type="submit" id="add_dress" name="add_dress" value="Добавить"><br>
-                            </div>
+                                <div align="right">
+                                    <input type="submit" id="add_dress" name="add_dress" value="Добавить"><br>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div class="clear"></div>

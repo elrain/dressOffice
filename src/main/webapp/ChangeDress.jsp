@@ -32,12 +32,12 @@
                     <div id="right">
                         <div class="content">
                             <form method="POST">
-                            <div align="center">Номер костюма
-                                <input type="text" id="id_dress" name="id_dress">
-                            </div>
-                            <div align="right">
-                                <input type="submit" id="searchById_dress" name="searchById_dress" value="Редактировать" >
-                            </div>
+                                <div align="center">Номер костюма
+                                    <input type="text" id="id_dress" name="id_dress">
+                                </div>
+                                <div align="right">
+                                    <input type="submit" id="searchById_dress" name="searchById_dress" value="Редактировать" >
+                                </div>
                             </form>                       
                         </div>
                     </div>

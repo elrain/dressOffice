@@ -35,7 +35,7 @@
                                 <div align="center"> Жанр
                                     <input type="text" id="genre" name="genre">
                                 </div>
-                                <div align="right">
+                                <div align="right"> 
                                     <input type="submit" id="searchByGenre" name="searchByGenre" value="Искать">
                                 </div>
                             </form>

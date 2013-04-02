@@ -35,7 +35,7 @@
                             <div align="center">Новое место размещения <br>
                                 <input type="text" id="new_place" name="new_place">
                             </div>
-                            <div align="right">
+                            <div align="right"> 
                                 <input type="submit" id="change" name="change" value="Изменить">
                             </div>
                             </form>                           

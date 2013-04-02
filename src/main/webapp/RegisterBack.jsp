@@ -56,7 +56,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div align="right">
+                                <div align="right"> 
                                     <input type="button" id="register_back" name="register_back" value="Зарегестрировать возврат">
                                 </div>
                             </form>

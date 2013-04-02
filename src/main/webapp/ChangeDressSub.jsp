@@ -33,43 +33,6 @@
                         <div class="content">
                             <form method="POST">
 <!--here-->
-<!--                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>Название </td>
-                                        <td><input type="text" id="name_dress" name="name_dress"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Цена </td>
-                                        <td><input type="text" id="price_dress" name="price_dress"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Тип </td>
-                                        <td><input type="text" id="type_dress" name="type_dress"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Жанр </td>
-                                        <td><input type="text" id="genre_dress" name="genre_dress"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Поджанр </td>
-                                        <td><input type="text" id="subGenre_dress" name="subGenre_dress"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Цвет </td>
-                                        <td><input type="text" id="color_dress" name="color_dress"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Размер </td>
-                                        <td><input type="text" id="size_dress" name="size_dress"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Место расположение </td>
-                                        <td><input type="text" id="place_dress" name="place_dress"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
--->
                             </form>                       
                         </div>
                     </div>

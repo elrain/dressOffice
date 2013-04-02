@@ -55,7 +55,7 @@
                                             <td><input type="text" id="eadress_order" name="eadress_order"></td>
                                         </tr>
                                         <tr>
-                                            <td>Телефон</td>
+                                            <td>Телефон</td> 
                                             <td><input type="text" id="tel_order" name="tel_order"></td>
                                         </tr>
                                         <tr>

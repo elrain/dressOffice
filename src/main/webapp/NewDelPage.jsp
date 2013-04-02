@@ -29,15 +29,15 @@
                     <div id="right">
                         <div class="content">
                             <form method="POST">
-                            <div align="center">Место размещения</div>
-                            <div align="center">
-                                <input type="text" id="place" name="place" value="0">
-                            </div>
-                            <div align="right">
-                                <input type="submit" id="add" name="command" value="Добавить">
-                                <br>
-                                <input type="submit" id="delete" name="command" value="Удалить">
-                            </div>
+                                <div align="center">Место размещения</div>
+                                <div align="center">
+                                    <input type="text" id="place" name="place" value="0">
+                                </div>
+                                <div align="right">
+                                    <input type="submit" id="add" name="command" value="Добавить">
+                                    <br>
+                                    <input type="submit" id="delete" name="command" value="Удалить">
+                                </div>
                             </form>                            
                         </div>
                     </div>

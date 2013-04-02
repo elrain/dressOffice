@@ -30,12 +30,12 @@
                         <div id="menubottom"></div>
                     </div>
                     <div id="right">
-                        <div class="content">
+                        <div class="content"> 
                             <ul>
-                                <il><a href="SearchBySize.jsp">Поиск по размеру</a></il>
-                                <il><a href="SearchByColor.jsp">Поиск по цвету</a></il>
-                                <il><a href="SearchByType.jsp">Поиск по типу</a></il>
-                                <il><a href="SearchByGenre.jsp">Поиск по жанру</a></il>
+                                <li><a href="SearchBySize.jsp">Поиск по размеру</a></li>
+                                <li><a href="SearchByColor.jsp">Поиск по цвету</a></li>
+                                <li><a href="SearchByType.jsp">Поиск по типу</a></li>
+                                <li><a href="SearchByGenre.jsp">Поиск по жанру</a></li>
                             </ul>
                         </div>
                     </div>

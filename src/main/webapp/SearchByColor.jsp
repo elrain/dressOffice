@@ -35,7 +35,7 @@
                                 <div align="center"> ÷вет
                                     <input type="text" id="color" name="color">
                                 </div>
-                                <div align="right">
+                                <div align="right"> 
                                     <input type="submit" id="searchByColor" name="searchByColor" value="»скать">
                                 </div>
                             </form>
