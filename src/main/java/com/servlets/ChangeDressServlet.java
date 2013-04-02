@@ -27,6 +27,7 @@ public class ChangeDressServlet extends HttpServlet {
 
     private String param;
     private int idDress;
+    private HttpSession session;
  
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -52,7 +53,7 @@ public class ChangeDressServlet extends HttpServlet {
         param = request.getParameter("id_dress");
         idDress = Integer.parseInt(param);
         
-        HttpSession session = request.getSession();
+        session = request.getSession();
         session.setAttribute("idDress", idDress);
         response.sendRedirect(request.getContextPath()+"/ChangeDressSub.jsp");
     }

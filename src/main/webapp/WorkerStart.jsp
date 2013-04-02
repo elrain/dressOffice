@@ -5,7 +5,7 @@
 
 
 <%@page contentType="text/html" pageEncoding="windows-1251"%>
---!>
+-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,6 +35,7 @@
                         </menu>
                     </td>
                     <td>
+<!--here-->
                     </td>
                 </tr>
             </tbody>

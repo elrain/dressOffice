@@ -109,6 +109,30 @@ public class Accessor {
             return retId;
         }
         
+        public List getActorInf(int id){
+            List actorInf = new ArrayList();
+            
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`InfActor`;");
+                if(rs.next()){
+                    actorInf.add(rs.getInt(1));
+                    actorInf.add(rs.getString(2));
+                    actorInf.add(rs.getString(3));
+                    actorInf.add(rs.getString(4));
+                    actorInf.add(rs.getString(5));
+                    actorInf.add(rs.getString(6));
+                }
+                rs = st.executeQuery("SELECT  `login` FROM `diplom`.`logpass` WHERE `id_logPass` = '"+id+"';");
+                if(rs.next())   actorInf.add(rs.getString(1));
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+            
+            return actorInf;
+        }
+        
         public void addNewPlace(int newPlace){
             int id = -1;
             int nid = 0;
@@ -277,12 +301,11 @@ public class Accessor {
                 ResultSet rs = st.executeQuery("SELECT max(id_dress) FROM `diplom`.`dress`;");
                 if(rs.next())   id = rs.getInt(1);
                 ++id;
-                
-                if(newDress.get(2).equals("Ì")) refs.add(1);
-                else if(newDress.get(2).equals("Ä")) refs.add(2);
-                
-                
-//                int n = st.executeUpdate("INSERT INTO `diplom`.`dress` (id_dress,name_dress,price_dress,ref_type,ref_subgenre,ref_size,ref_color,ref_place,free,wath) VALUES("+id+", '"+newDress.get(0)+"','"+newDress.get(1)+"','"+newDress.get(2)+"','"+newDress.get(4)+"','"+newDress.get(5)+"','"+newDress.get(6)+"','"+newDress.get(7)+"', 0, 0);");
+                int n = st.executeUpdate("INSERT INTO `diplom`.`dress` (id_dress,name_dress,price_dress,"
+                        + "ref_type,ref_subgenre,ref_size,ref_color,ref_place,free,wath) "
+                        + "VALUES("+id+", '"+newDress.get(0)+"','"+newDress.get(1)+"','"
+                        +newDress.get(2)+"','"+newDress.get(4)+"','"+newDress.get(5)+"','"
+                        +newDress.get(6)+"','"+newDress.get(7)+"', 0, 0);");
             }
             catch(Exception ex){
                 ex.printStackTrace();
@@ -304,5 +327,60 @@ public class Accessor {
             }
             
             return colorList;
+        }
+        
+        public List getGenre(){
+            List genreList = new ArrayList();
+            
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`genre`;");
+                while(rs.next()){
+                    genreList.add(rs.getInt(1));
+                    genreList.add(rs.getString(2));
+                }
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+            
+            return genreList;
+        }
+        
+        public List getSubGenre(){
+            List subGenreList = new ArrayList();
+            
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`subgenre`;");
+                while(rs.next()){
+                    subGenreList.add(rs.getInt(1));
+                    subGenreList.add(rs.getString(2));
+                    subGenreList.add(rs.getInt(3));
+                }
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+            
+            return subGenreList;
+        }
+        
+        public List getSize(){
+            List sizeList = new ArrayList();
+            
+            try{
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("SELECT * FROM `diplom`.`size`;");
+                while(rs.next()){
+                    sizeList.add(rs.getInt(1));
+                    sizeList.add(rs.getString(2));
+                }
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
+            
+            return sizeList;
         }
 }

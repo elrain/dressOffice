@@ -1,35 +1,37 @@
+<!-- 
+    Document   : shablonStranici
+    Created on : 02.04.2013, 17:57:44
+    Author     : Tanya
+<%@page contentType="text/html" pageEncoding="windows-1251"%>
+-->
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+        <title>Welcome</title>
+        <link href="css.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <table width="100%" height="100%">
-            <tbody>
-                <tr>
-                    <td width="30%" bgcolor="#7FF4F0">
-                        logo place
-                    </td>
-                    <td bgcolor="#76A3F5">
-                        head of the site
-                    </td>
-                </tr>
-                <tr>
-                    <td bgcolor="#AFC5ED">
-                        place for ssilka's
-                    </td>
-                    <td>
-                        <form method="POST">
+        <div id="container">
+            <div id="header"></div>
+            <div id="border">
+                <div id="left">
+                    <div id="menu"></div>
+                    <div id="menubottom"></div>
+                </div>
+                <div id="right">
+                    <div class="content">
+<form method="POST">
                             <table>
                                 <tbody>
                                     <tr>
                                         <td>Login:</td>
                                         <td><input type="text" id="login" name="login" size="15"></td>
                                     </tr>
+<tr><td>&nbsp;</td></tr>
                                     <tr>
                                         <td>Password:</td>
-                                        <td><input type="password" id="password" name="password" size="17"></td>
+                                        <td><input type="password" id="password" name="password" size="15"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -37,9 +39,13 @@
                                 <input type="submit" value="Enter">
                             </div>
                         </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="finish">
+                
+            </div>
+        </div>
     </body>
 </html>
