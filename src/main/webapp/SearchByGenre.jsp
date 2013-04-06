@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
         <div id="container">
@@ -33,10 +34,12 @@
                         <div class="content">
                             <form method="POST">
                                 <div align="center"> Жанр
-                                    <input type="text" id="genre" name="genre">
+<!--here-->
+                                    <!--<input type="text" id="genre" name="genre">-->
                                 </div>
                                 <div align="right"> 
-                                    <input type="submit" id="searchByGenre" name="searchByGenre" value="Искать">
+                                    <dd>&nbsp;</dd>
+                                    <input type="submit" id="searchByGenre" name="searchByGenre" value="Искать"  class="knopka">
                                 </div>
                             </form>
                         </div>

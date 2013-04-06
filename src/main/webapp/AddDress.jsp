@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
         <div id="container">
@@ -36,16 +37,16 @@
                                     <tbody>
                                         <tr>
                                             <td>Название </td>
-                                            <td><input type="text" id="add_name_dress" name="add_name_dress"></td>
+                                            <td><input type="text" id="add_name_dress" name="add_name_dress" class="inptext"></td>
                                         </tr>
                                         <tr>
                                             <td>Цена </td>
-                                            <td><input type="text" id="add_price_dress" name="add_price_dress"></td>
+                                            <td><input type="text" id="add_price_dress" name="add_price_dress" class="inptext"></td>
                                         </tr>
                                         <tr>
                                             <td>Тип </td>
                                             <td>
-                                                <select id="add_type_dress" name="add_type_dress">
+                                                <select id="add_type_dress" name="add_type_dress" class='inpselect'>
                                                     <option value="1">Мальчик</option>
                                                     <option value="2">Девочка</option>
                                                 </select>
@@ -72,12 +73,13 @@
                                         </tr>
                                         <tr>
                                             <td>Место расположение </td>
-                                            <td><input type="text" id="add_place_dress" name="add_place_dress"></td>
+                                            <td><input type="text" id="add_place_dress" name="add_place_dress" class='inptext'></td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div align="right">
-                                    <input type="submit" id="add_dress" name="add_dress" value="Добавить"><br>
+                                    <dd>&nbsp;</dd>
+                                    <input type="submit" id="add_dress" name="add_dress" value="Добавить"  class="knopka"><br>
                                 </div>
                             </form>
                         </div>

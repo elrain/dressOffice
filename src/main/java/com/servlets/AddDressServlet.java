@@ -57,7 +57,7 @@ public class AddDressServlet extends HttpServlet {
 	while((buf=fin.readLine()) != null) {
             if(buf.equals("<!--here1-->")){
                 writer.println("<td>");
-                writer.println("<select id='add_genre_dress' name='add_genre_dress'>");
+                writer.println("<select id='add_genre_dress' name='add_genre_dress' class='inpselect'>");
                 for(int i=0; i<genreList.size(); i+=2){
                     writer.println("<option value='"+genreList.get(i)+"'>"+genreList.get(i+1)+"</option>");
                 }
@@ -66,7 +66,7 @@ public class AddDressServlet extends HttpServlet {
             }
             if(buf.equals("<!--here2-->")){
                 writer.println("<td>");
-                writer.println("<select id='add_subGenre_dress' name='add_subGenre_dress'>");
+                writer.println("<select id='add_subGenre_dress' name='add_subGenre_dress' class='inpselect'>");
                 for(int i=0; i<subGenreList.size(); i+=3){
                     writer.println("<option value='"+subGenreList.get(i)+"'>"+subGenreList.get(i+1)+"</option>");
                 }
@@ -75,7 +75,7 @@ public class AddDressServlet extends HttpServlet {
             }
             if(buf.equals("<!--here3-->")){
                 writer.println("<td>");
-                writer.println("<select id='add_color_dress' name='add_color_dress'>");
+                writer.println("<select id='add_color_dress' name='add_color_dress' class='inpselect'>");
                 for(int i=0; i<colorList.size(); i+=2){
                     writer.println("<option value='"+colorList.get(i)+"'>"+colorList.get(i+1)+"</option>");
                 }
@@ -85,7 +85,7 @@ public class AddDressServlet extends HttpServlet {
             }
             if(buf.equals("<!--here4-->")){
                 writer.println("<td>");
-                writer.println("<select id='add_size_dress' name='add_size_dress'>");
+                writer.println("<select id='add_size_dress' name='add_size_dress' class='inpselect'>");
                 for(int i=0; i<sizeList.size(); i+=2){
                     writer.println("<option value='"+sizeList.get(i)+"'>"+sizeList.get(i+1)+"</option>");
                 }

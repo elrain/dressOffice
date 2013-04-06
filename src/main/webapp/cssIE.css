@@ -61,9 +61,7 @@ div {
     width: 220px;
     margin-left: 45px;
 }
-ul{
-    padding: 5px 0 5px 20px
-}
+
 #menu li {
     background: url(image/li_menu.gif);
     background-repeat: no-repeat;
@@ -73,19 +71,14 @@ ul{
     padding: 4px 0 4px 35px;
     text-align: left;
 }
-
+ul{
+    padding: 5px 0 5px 20px
+}
 * {
     margin: 0;
     padding: 0;
 }
 .knopka{
-    font-family: Bolero script, Comic Sans MS;
-    font-size: medium;
-    border-radius: 5em / 2em;
-    border-radius: .4em .4em 2em 2em / .4em .4em 3em 3em;
-    border-radius: .5em;    /*Меняет закруглённость*/
-    background-color: #ECD9AF;
-    border-color: #2C0A00;
     width:200px;
     cursor: pointer; /* Изменение вида курсора при наведении*/
 }
@@ -101,7 +94,7 @@ ul{
     font-weight:900;    
     color:#2C0A00;
     text-decoration:none;
-    font-size:20px
+    font-size:16px
 }
 #menu a:hover {
     color:#0A4B05;    
@@ -116,24 +109,6 @@ a:visited {
 a:active {
     color: #2C0A00; /* Цвет активных ссылок */
 }
-i{
-    color: #0A4B05;
-}
-.inptext{
-    font-family: Bolero script, Comic Sans MS;
-    font-size: medium;
-    border-radius: 5em / 2em;
-    border-radius: .4em .4em 2em 2em / .4em .4em 3em 3em;
-    border-radius: .5em;
-    border-color: #2C0A00;
-    background-color: #ECD9AF;
-}
-.inpselect{
-    font-family: Bolero script, Comic Sans MS;
-    font-size: medium;
-    border-radius: 5em / 2em;
-    border-radius: .4em .4em 2em 2em / .4em .4em 3em 3em;
-    border-radius: .5em;
-    border-color: #2C0A00;
-    background-color: #ECD9AF;
+.pas{
+    width: 125px;
 }

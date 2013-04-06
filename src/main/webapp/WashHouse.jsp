@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
         <script lang="javascript">
             function io(jk){
                 if(jk == "asd"){
@@ -58,9 +59,10 @@
                                         <option value="6" id="as6" name="as52" >ahjkl;sdasd</option>
                                     </select>
                                 </div>
-                                <div align="right"> 
-                                    <input type="button" id="goToWashHouse" name="commandWashHouse" value="Отправить в прачечную"><br>
-                                    <input type="button" id="fromWashHouse" name="commandWashHouse" value="Принять с прачечной">
+                                <div align="right">
+                                    <dd>&nbsp;</dd>
+                                    <input type="button" id="goToWashHouse" name="commandWashHouse" value="Отправить в прачечную"  class="knopka"><br>
+                                    <input type="button" id="fromWashHouse" name="commandWashHouse" value="Принять с прачечной"  class="knopka">
                                 </div>
                             </form>
                         </div>

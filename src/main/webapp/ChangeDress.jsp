@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
         <div id="container">
@@ -32,11 +33,12 @@
                     <div id="right">
                         <div class="content">
                             <form method="POST">
-                                <div align="center">Номер костюма
+                                <div align="center">Номер костюма<br>
                                     <input type="text" id="id_dress" name="id_dress">
                                 </div>
                                 <div align="right">
-                                    <input type="submit" id="searchById_dress" name="searchById_dress" value="Редактировать" >
+                                    <dd>&nbsp;</dd>
+                                    <input type="submit" id="searchById_dress" name="searchById_dress" value="Редактировать" class="knopka">
                                 </div>
                             </form>                       
                         </div>

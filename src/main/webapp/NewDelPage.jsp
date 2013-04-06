@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
         <div id="container">
@@ -31,12 +32,12 @@
                             <form method="POST">
                                 <div align="center">Место размещения</div>
                                 <div align="center">
-                                    <input type="text" id="place" name="place" value="0">
+                                    <input type="text" id="place" name="place" value="0" class="inptext">
                                 </div>
                                 <div align="right">
-                                    <input type="submit" id="add" name="command" value="Добавить">
-                                    <br>
-                                    <input type="submit" id="delete" name="command" value="Удалить">
+                                    <dd>&nbsp;</dd>
+                                    <input type="image" src="image/li_menu.gif" id="add" name="command" value="Добавить" class="knopka"><br>
+                                    <input type="submit" id="delete" name="command" value="Удалить" class="knopka">
                                 </div>
                             </form>                            
                         </div>

@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
         <div id="container">
@@ -81,7 +82,8 @@
                                     </tbody>
                                 </table>
                                 <div align="right">
-                                    <input type="button" id="addOrder_order" name="addOrder_order" value="Оформить">
+                                    <dd>&nbsp;</dd>
+                                    <input type="button" id="addOrder_order" name="addOrder_order" value="Оформить"   class="knopka">
                                 </div>                    
                             </form>
                         </div>

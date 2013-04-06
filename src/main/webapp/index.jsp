@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
         <div id="container">
@@ -30,12 +31,15 @@
                                     </tr>
                                     <tr>
                                         <td>Password:</td>
-                                        <td><input type="password" id="password" name="password" size="15"></td>
+                                        <td><input type="password" id="password" name="password" size="15" class="pas"></td>
                                     </tr>
                                 </tbody>
                             </table>
+                                </tbody>
+                                </table>
                             <div align="right">
-                                <input type="submit" value="Enter">
+                                <dd>&nbsp;</dd>
+                                <input type="submit" value="Enter" class="knopka">
                             </div>
                         </form>
                     </div>

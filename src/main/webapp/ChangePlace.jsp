@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
         <div id="container">
@@ -36,7 +37,8 @@
                                 <input type="text" id="new_place" name="new_place">
                             </div>
                             <div align="right"> 
-                                <input type="submit" id="change" name="change" value="Изменить">
+                                <dd>&nbsp;</dd>
+                                <input type="submit" id="change" name="change" value="Изменить" class="knopka">
                             </div>
                             </form>                           
                         </div>

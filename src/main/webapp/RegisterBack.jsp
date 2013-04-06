@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
         <title>Welcome</title>
         <link href="css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
         <div id="container">
@@ -57,7 +58,8 @@
                                     </tbody>
                                 </table>
                                 <div align="right"> 
-                                    <input type="button" id="register_back" name="register_back" value="Зарегестрировать возврат">
+                                    <dd>&nbsp;</dd>
+                                    <input type="button" id="register_back" name="register_back" value="Зарегестрировать возврат"  class="knopka">
                                 </div>
                             </form>
                         </div>
