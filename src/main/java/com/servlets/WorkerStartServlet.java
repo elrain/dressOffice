@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
-
 public class WorkerStartServlet extends HttpServlet {
 
     private HttpSession session;

@@ -4,7 +4,7 @@
     Author     : Tanya
 <%@page contentType="text/html" pageEncoding="windows-1251"%>
 -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
@@ -70,7 +70,6 @@
 <!--here1-->
                                                 </div>
                                             </td>
-
                                             <!--<td><input type="text" id="add_genre_dress" name="add_genre_dress"></td>-->
                                         </tr>
                                         <tr> 

@@ -36,7 +36,7 @@
                            </form>
                         </div>
                    </div>
-                    <div id="right">
+                   <div id="right">
                         <div class="content">
 <!--here-->
                         </div>

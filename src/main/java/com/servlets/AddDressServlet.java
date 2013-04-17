@@ -79,7 +79,7 @@ public class AddDressServlet extends HttpServlet {
                 }
                 writer.println("</select>");
             }
-		writer.println(buf);
+            writer.println(buf);
 	}
 	fin.close();
         writer.close();
@@ -125,6 +125,7 @@ public class AddDressServlet extends HttpServlet {
         else if(param.equals("Выход")){
             response.sendRedirect(request.getContextPath()+"/index.jsp");
         }
+        
     }
 
     @Override
