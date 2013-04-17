@@ -13,12 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author elrain
- */
+
 public class SvodnayaServlet extends HttpServlet {
 
+    private String param;
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -37,6 +36,16 @@ public class SvodnayaServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setCharacterEncoding("cp1251");
+        request.setCharacterEncoding("cp1251");
+        
+        param = request.getParameter("command");
+        if(param.equals("Главная")){
+            response.sendRedirect(request.getContextPath()+"/PMStart.jsp");
+        }
+        else if(param.equals("Выход")){
+            response.sendRedirect(request.getContextPath()+"/index.jsp");
+        }
     }
 
     @Override

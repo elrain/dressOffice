@@ -1,42 +1,52 @@
 <!-- 
-    Document   : PMStart
-    Created on : 28.03.2013, 22:11:19
-    Author     : elrain
--->
-<!--
+    Document   : shablonStranici
+    Created on : 02.04.2013, 17:57:44
+    Author     : Tanya
 <%@page contentType="text/html" pageEncoding="windows-1251"%>
 -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-        <title>JSP Page</title>
+        <title>Welcome</title>
+        <link href="css/css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="css/cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
-        <table width="100%" height="100%">
-            <tbody>
-                <tr>
-                    <td width="30%" bgcolor="#7FF4F0">
-                        logo place
-                    </td>
-                    <td bgcolor="#76A3F5">
-                        head of the site
-                    </td>
-                </tr>
-                <tr>
-                    <td bgcolor="#AFC5ED">
-                        <menu>
-                            <form method="POST">
+        <div id="container">
+            <div id="header"></div>
+            <div id="border">
+                <div id="main">
+                    <div id="left">
+                        <div id="menu">
+                            <ul>
                                 <li><a href="Svodnaya.jsp">Сводная ведомость</a></li>
                                 <li><a href="NewDelPage.jsp">Добавление/Удаление места расположения</a></li>
                                 <li><a href="ChangePlace.jsp">Изменение места расположения</a></li>
-                            </form>                            
-                        </menu>
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                                <li><a href="Search.jsp"> Поиск костюма</a></li>
+                            </ul>
+                        </div>
+                        <div id="menubottom">
+                            <form method="POST">
+                                <ul>
+                                    <li><input type="submit" value="Главная" class="knopka_menu" id="command" name="command"></li>
+                                    <li>|</li>
+                                    <li><input type="submit" value="Выход" class="knopka_menu" id="command" name="command"></li>
+                                </ul>
+                           </form>
+                        </div>
+                   </div>
+                    <div id="right">
+                        <div class="content">
+<!--here-->
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="finish">
+                
+            </div>
+        </div>
     </body>
 </html>

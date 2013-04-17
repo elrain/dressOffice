@@ -1,95 +1,119 @@
 <!-- 
-    Document   : AddDress
-    Created on : 26.03.2013, 19:37:05
+    Document   : shablonStranici
+    Created on : 02.04.2013, 17:57:44
     Author     : Tanya
-
 <%@page contentType="text/html" pageEncoding="windows-1251"%>
 -->
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-        <title>JSP Page</title>
+        <title>Welcome</title>
+        <link href="css/css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="css/cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
-        <table width="100%" height="100%">
-            <tbody>
-                <tr>
-                    <td width="30%" bgcolor="#7FF4F0">
-                        logo place
-                    </td>
-                    <td bgcolor="#76A3F5">
-                        head of the site
-                    </td>
-                </tr>
-                <tr>
-                    <td bgcolor="#AFC5ED">
-                        <menu>
-                            <li><a href="SearchBy.jsp">Поиск по критериям</a></li>
-                            <li><a href="ChangeDress.jsp">Редактирование данных о костюме</a></li>
-                            <li><a href="OrderPage.jsp">Выдача костюма в прокат</a></li>
-                            <li><a href="RegisterBack.jsp">Регистрация возврата</a></li>
-                            <li><a href="WashHouse.jsp">Работа с прачечной</a></li>
-                            <li><a href="AddDress.jsp">Добавить костюм</a></li>
-                        </menu>
-                    </td>
-                    <td>
-                        <form method="POST">
-                            <table>
+        <div id="container">
+            <div id="header"></div>
+            <div id="border">
+                <div id="main">
+                    <div id="left">
+                        <div id="menu">
+                            <ul>
+                                <li><a href="SearchBy.jsp">Поиск костюма</a></li>
+                                <li><a href="ChangeDress.jsp">Редактирование данных о костюме</a></li>
+                                <li><a href="OrderPage.jsp">Выдача костюма в прокат</a></li>
+                                <li><a href="RegisterBack.jsp">Регистрация возврата</a></li>
+                                <li><a href="WashHouse.jsp">Работа с прачечной</a></li>
+                                <li><a href="AddDress.jsp">Добавить костюм</a></li>
+                            </ul>
+                        </div>
+                        <div id="menubottom">
+                            <form method="POST">
+                                <ul>
+                                    <li><input type="submit" value="Главная" class="knopka_menu" id="command" name="command"></li>
+                                    <li>|</li>
+                                    <li><input type="submit" value="Выход" class="knopka_menu" id="command" name="command"></li>
+                                </ul>
+                           </form>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <div class="content">
+                            <h2>Добавить костюм</h2>
+                            <form method="POST">
+                                <table>
                                     <tbody>
                                         <tr>
                                             <td>Название </td>
-                                            <td><input type="text" id="add_name_dress" name="add_name_dress"></td>
+                                            <td><input type="text" id="add_name_dress" name="add_name_dress" class="inptext"></td>
                                         </tr>
                                         <tr>
                                             <td>Цена </td>
-                                            <td><input type="text" id="add_price_dress" name="add_price_dress"></td>
+                                            <td><input type="text" id="add_price_dress" name="add_price_dress" class="inptext"></td>
                                         </tr>
                                         <tr>
                                             <td>Тип </td>
                                             <td>
-                                                <select id="add_type_dress" name="add_type_dress">
-                                                    <option value="М">Мальчик</option>
-                                                    <option value="Д">Девочка</option>
-                                                </select>
+                                                <div class="styled-select">
+                                                    <select id="add_type_dress" name="add_type_dress" class='inpselect'>
+                                                        <option value="1">Мальчик</option>
+                                                        <option value="2">Девочка</option>
+                                                    </select>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Жанр </td>
-                                            <td><input type="text" id="add_genre_dress" name="add_genre_dress"></td>
+                                            <td>
+                                                <div class="styled-select">
+<!--here1-->
+                                                </div>
+                                            </td>
+
+                                            <!--<td><input type="text" id="add_genre_dress" name="add_genre_dress"></td>-->
                                         </tr>
-                                        <tr>
+                                        <tr> 
                                             <td>Поджанр </td>
-                                            <td><input type="text" id="add_subGenre_dress" name="add_subGenre_dress"></td>
+                                            <td>
+                                                <div class="styled-select">
+<!--here2-->
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Цвет </td>
-<!--here-->
-                                           <!-- <td><input type="text" id="add_color_dress" name="add_color_dress"></td>-->
+                                            <td>
+                                                <div class="styled-select">
+<!--here3-->
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Размер </td>
                                             <td>
-                                                <select id="add_size_dress" name="add_size_dress">
-                                                    <option value='42'>42</option>
-                                                    <option value='46'>46</option>
-                                                    <option value='50'>50</option>
-                                                </select>
+                                                <div class="styled-select">
+<!--here4-->
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Место расположение </td>
-                                            <td><input type="text" id="add_place_dress" name="add_place_dress"></td>
+                                            <td><input type="text" id="add_place_dress" name="add_place_dress" class='inptext'></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            <div align="right">
-                                <input type="submit" id="add_dress" name="add_dress" value="Добавить"><br>
-                            </div>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                                <div align="right">
+                                    <dd>&nbsp;</dd>
+                                    <input type="submit" id="add_dress" name="command" value="Добавить"  class="knopka"><br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="finish"></div>
+        </div>
     </body>
 </html>

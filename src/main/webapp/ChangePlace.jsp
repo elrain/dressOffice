@@ -1,51 +1,62 @@
 <!-- 
-    Document   : ChangePlace
-    Created on : 26.03.2013, 12:17:40
+    Document   : shablonStranici
+    Created on : 02.04.2013, 17:57:44
     Author     : Tanya
 <%@page contentType="text/html" pageEncoding="windows-1251"%>
 -->
-
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-        <title>JSP Page</title>
+        <title>Welcome</title>
+        <link href="css/css.css" rel="stylesheet" type="text/css">
+        <!--[if IE]><link href="css/cssIE.css" rel="stylesheet" type="text/css"><![endif]-->
     </head>
     <body>
-        <table width="100%" height="100%">
-            <tbody>
-                <tr>
-                    <td width="30%" bgcolor="#7FF4F0">
-                        logo place
-                    </td>
-                    <td bgcolor="#76A3F5">
-                        head of the site
-                    </td>
-                </tr>
-                <tr>
-                    <td bgcolor="#AFC5ED">
-                        <menu>
-                            <li><a href="Svodnaya.jsp">Сводная ведомость</a></li>
-                            <li><a href="NewDelPage.jsp">Добавление/Удаление места расположения</a></li>
-                            <li><a href="ChangePlace.jsp">Изменение места расположения</a></li>
-                        </menu>
-                    </td>
-                    <td>
-                        <form method="POST">
+        <div id="container">
+            <div id="header"></div>
+            <div id="border">
+                <div id="main">
+                    <div id="left">
+                        <div id="menu">
+                            <ul>
+                                <li><a href="Svodnaya.jsp">Сводная ведомость</a></li>
+                                <li><a href="NewDelPage.jsp">Добавление/Удаление места расположения</a></li>
+                                <li><a href="ChangePlace.jsp">Изменение места расположения</a></li>
+                                <li><a href="Search.jsp"> Поиск костюма</a></li>
+                            </ul>
+                        </div>
+                        <div id="menubottom">
+                            <form method="POST">
+                                <ul>
+                                    <li><input type="submit" value="Главная" class="knopka_menu" id="command" name="command"></li>
+                                    <li>|</li>
+                                    <li><input type="submit" value="Выход" class="knopka_menu" id="command" name="command"></li>
+                                </ul>
+                           </form>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <div class="content">
+                            <h2>Изменение места расположения</h2>
+                            <form method="POST">
                             <div align="center">Старое место размещения <br>
-                                <input type="text" id="old_place" name="old_place">
+                                <input type="text" id="old_place" name="old_place" class="inptext">
                             </div>
                             <div align="center">Новое место размещения <br>
-                                <input type="text" id="new_place" name="new_place">
+                                <input type="text" id="new_place" name="new_place" class="inptext">
                             </div>
-                            <div align="right">
-                                <input type="submit" id="change" name="change" value="Изменить">
+                            <div align="right"> 
+                                <dd>&nbsp;</dd>
+                                <input type="submit" id="change" name="command" value="Изменить" class="knopka">
                             </div>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                            </form>                           
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="finish"></div>
+        </div>
     </body>
 </html>

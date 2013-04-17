@@ -1,0 +1,53 @@
+ADMIN       ADMIN       ADMIN       ADMIN
+<table width="100%" height="100%">
+    <tbody>
+        <tr>
+            <td width="30%" bgcolor="#5555BB">
+                logo place
+            </td>
+            <td bgcolor="#3333AA">
+                head of the site
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#77BB77">
+                <menu>
+                    <li><a href="Svodnaya.jsp">Сводная ведомость</a></li>
+                    <li><a href="NewDelPage.jsp">Добавление/Удаление места расположения</a></li>
+                    <li><a href="ChangePlace.jsp">Изменение места расположения</a></li>
+                </menu>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+USER        USER        USER        USER
+
+<table width="100%" height="100%">
+            <tbody>
+                <tr>
+                    <td width="30%" bgcolor="#5555BB">
+                        logo place
+                    </td>
+                    <td bgcolor="#3333AA">
+                        head of the site
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#77BB77">
+                        <menu>
+                            <li><a href="Svodnaya.jsp">Поиск по критериям</a></li>
+                            <li><a href="NewDelPage.jsp">Редактирование данных о костюме</a></li>
+                            <li><a href="ChangePlace.jsp">Выдача костюма в прокат</a></li>
+                            <li><a href="ChangePlace.jsp">Регистрация возврата</a></li>
+                            <li><a href="ChangePlace.jsp">Работа с прачечной</a></li>
+                            <li><a href="ChangePlace.jsp">Добавить костюм</a></li>
+                        </menu>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>

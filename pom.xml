@@ -5,7 +5,7 @@
   <artifactId>diplom2</artifactId>
   <packaging>war</packaging>
   <version>1.0</version>
-  <name>diplom2 Maven Webapp</name>
+  <name>diplom</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -50,4 +50,7 @@
   <build>
     <finalName>diplom2</finalName>
   </build>
+    <properties>
+        <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
+    </properties>
 </project>

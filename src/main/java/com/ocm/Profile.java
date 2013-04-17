@@ -4,10 +4,7 @@
  */
 package com.ocm;
 
-/**
- *
- * @author elrain
- */
+
 public class Profile {
     
     private String strLogin;

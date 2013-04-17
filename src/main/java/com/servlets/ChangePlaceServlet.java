@@ -15,10 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author elrain
- */
+
 public class ChangePlaceServlet extends HttpServlet {
 
     private String param;
@@ -45,30 +42,44 @@ public class ChangePlaceServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        param = request.getParameter("old_place");
-        oldPlace = Integer.parseInt(param);
-        if(oldPlace > 0){
-            param = request.getParameter("new_place");
-            newPlace = Integer.parseInt(param);
-            if(newPlace > 0){
-                try{
-                    Accessor acc = Accessor.getInstance("localhost", "Diplom");
-                    acc.changePlace(oldPlace, newPlace);
+        response.setCharacterEncoding("cp1251");
+        request.setCharacterEncoding("cp1251");
+        
+        param = request.getParameter("command");
+        if(param.equals("Изменить")){
+            param = request.getParameter("old_place");
+            oldPlace = Integer.parseInt(param);
+            if(oldPlace > 0){
+                param = request.getParameter("new_place");
+                newPlace = Integer.parseInt(param);
+                if(newPlace > 0){
+                    try{
+                        Accessor acc = Accessor.getInstance("localhost", "Diplom");
+                        acc.changePlace(oldPlace, newPlace);
+                    }
+                    catch(Exception ex){
+                        ex.printStackTrace();
+                    }
                 }
-                catch(Exception ex){
-                    ex.printStackTrace();
+                else{
+                    JOptionPane.showMessageDialog(null, "Incorrect new place");
+                    response.sendRedirect(request.getContextPath() + "/ChangePlace.jpg");
                 }
             }
             else{
-                JOptionPane.showMessageDialog(null, "Incorrect new place");
+                JOptionPane.showMessageDialog(null, "Incorrect old place");
                 response.sendRedirect(request.getContextPath() + "/ChangePlace.jpg");
             }
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Incorrect old place");
             response.sendRedirect(request.getContextPath() + "/ChangePlace.jpg");
         }
-        response.sendRedirect(request.getContextPath() + "/ChangePlace.jpg");
+        else if(param.equals("Главная")){
+            response.sendRedirect(request.getContextPath()+"/PMStart.jsp");
+        }
+        else if(param.equals("Выход")){
+            response.sendRedirect(request.getContextPath()+"/index.jsp");
+        }
+        
+        
     }
 
     @Override

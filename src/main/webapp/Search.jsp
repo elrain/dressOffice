@@ -20,12 +20,10 @@
                     <div id="left">
                         <div id="menu">
                             <ul>
-                                <li><a href="SearchBy.jsp">Поиск костюма</a></li>
-                                <li><a href="ChangeDress.jsp">Редактирование данных о костюме</a></li>
-                                <li><a href="OrderPage.jsp">Выдача костюма в прокат</a></li>
-                                <li><a href="RegisterBack.jsp">Регистрация возврата</a></li>
-                                <li><a href="WashHouse.jsp">Работа с прачечной</a></li>
-                                <li><a href="AddDress.jsp">Добавить костюм</a></li>
+                                <li><a href="Svodnaya.jsp">Сводная ведомость</a></li>
+                                <li><a href="NewDelPage.jsp">Добавление/Удаление места расположения</a></li>
+                                <li><a href="ChangePlace.jsp">Изменение места расположения</a></li>
+                                <li><a href="Search.jsp"> Поиск костюма</a></li>
                             </ul>
                         </div>
                         <div id="menubottom">
@@ -37,9 +35,9 @@
                                 </ul>
                            </form>
                         </div>
-                    </div>
+                   </div>
                     <div id="right">
-                        <div class="content"> 
+                        <div class="content">
                             <h2>Поиск костюма</h2>
                             <form method="POST">
                                 <table>
@@ -99,8 +97,9 @@
                                                 </div>
                                             </td>
                                         </tr>
+                                        
                                         <tr>
-                                            <td align="center">
+                                            <td align="left">
                                                 <input type="checkbox" id="c1" name="second" class="check">
                                                 <label for="c1"><span></span>Костюм занят</label>
                                             </td>
@@ -118,7 +117,9 @@
                     <div class="clear"></div>
                 </div>
             </div>
-            <div id="finish"></div>
+            <div id="finish">
+                
+            </div>
         </div>
     </body>
 </html>

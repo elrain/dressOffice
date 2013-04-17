@@ -68,6 +68,10 @@
         <servlet-name>WashHouseServlet</servlet-name>
         <servlet-class>com.servlets.WashHouseServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.servlets.SearchServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/index.jsp</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>WashHouseServlet</servlet-name>
         <url-pattern>/WashHouse.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/Search.jsp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -20,10 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author elrain
- */
+
 public class ChangeDressSubServlet extends HttpServlet {
 
     private int idDress;

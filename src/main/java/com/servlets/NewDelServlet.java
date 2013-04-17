@@ -16,13 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author elrain
- */
 @WebServlet(urlPatterns = {"/NewDelPage.jsp"})
 public class NewDelServlet extends HttpServlet {
 
+    private String param;
     private String but1;
     private String strPlace;
     private int place;
@@ -47,13 +44,14 @@ public class NewDelServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        response.setCharacterEncoding("cp1251");
         request.setCharacterEncoding("cp1251");
-        but1 = request.getParameter("command");
-        strPlace = request.getParameter("place");
-        place = Integer.parseInt(strPlace);
         
-        if(place > 0){
-            if(but1.equals("Добавить")) {
+        but1 = request.getParameter("command");
+        if(but1.equals("Добавить")){
+            strPlace = request.getParameter("place");
+            place = Integer.parseInt(strPlace);
+            if(place > 0){
                 try{
                     Accessor acc = Accessor.getInstance("localhost", "Diplom");
                     acc.addNewPlace(place);
@@ -63,20 +61,26 @@ public class NewDelServlet extends HttpServlet {
                 }
                 response.sendRedirect(request.getContextPath()+"/NewDelPage.jsp");
             }
-            else if(but1.equals("Удалить")){
-                try{
-                    Accessor acc = Accessor.getInstance("localhost", "Diplom");
-                    acc.delOldPlace(place);
-                }
-                catch(Exception ex){
-                    ex.printStackTrace();
-                }
+            else{
+                JOptionPane.showMessageDialog(null, "Incorrect number of place");
                 response.sendRedirect(request.getContextPath()+"/NewDelPage.jsp");
             }
         }
-        else{
-            JOptionPane.showMessageDialog(null, "Incorrect number of place");
+        else if(but1.equals("Удалить")){
+            try{
+                Accessor acc = Accessor.getInstance("localhost", "Diplom");
+                acc.delOldPlace(place);
+            }
+            catch(Exception ex){
+                ex.printStackTrace();
+            }
             response.sendRedirect(request.getContextPath()+"/NewDelPage.jsp");
+        }
+        else if(but1.equals("Главная")){
+            response.sendRedirect(request.getContextPath()+"/PMStart.jsp");
+        }
+        else if(but1.equals("Выход")){
+            response.sendRedirect(request.getContextPath()+"/index.jsp");
         }
     }
 

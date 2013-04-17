@@ -17,16 +17,15 @@ import javax.swing.JOptionPane;
 import com.accessor.Accessor;
 import com.ocm.Profile;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author elrain
- */
 @WebServlet(urlPatterns = {"/index.jsp"})
 public class LoginServlet extends HttpServlet {
 
     private Profile p = new Profile();
     private int id = -1;
+    private HttpSession session;
+    private String idLogin;
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -60,6 +59,9 @@ public class LoginServlet extends HttpServlet {
             ex.printStackTrace();
         }
         
+        idLogin = Integer.toString(id);
+        session = request.getSession();
+        session.setAttribute("idLogin", idLogin);
         if(id == 1) response.sendRedirect(request.getContextPath()+"/PMStart.jsp");
         else if(id >= 2) response.sendRedirect(request.getContextPath()+"/WorkerStart.jsp");
         else if(id == -1) response.sendRedirect(request.getContextPath()+"/index.jsp");
