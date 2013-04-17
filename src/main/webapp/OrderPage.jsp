@@ -34,7 +34,7 @@
                 else if(m2 == m1){
                     m = m2;
                 }
-                alert(d1); alert(d2);
+                alert(d1); alert(d2); 
                 alert("d"+d);alert("m"+m);
                 summa = d*m*25;
                 alert("Сумма оплаты: "+ summa);
